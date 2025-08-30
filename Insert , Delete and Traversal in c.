@@ -1,0 +1,83 @@
+#include<stdio.h>
+
+int insert(),delete(),traversal();
+int array[100],loop,num_array,position,insert_element,select;
+int main()
+{
+    printf("ENTER THE LENGTH OF TABLE : ");
+    scanf("%d",&num_array);//Length of array
+    
+    printf("\nENTER THE ELEMENT NUMBER : ");
+
+    for(loop=0;loop<num_array;loop++)
+    {
+        printf("%d : ",loop+1);
+        scanf("%d",&array[loop]);
+    }
+    again:
+    printf("\nSELECT 1 FOR INSERT ELEMENT : ");
+    printf("\nSELECT 2 FOR DELETE ELEMENT : ");
+    printf("\nSELECT 3 FOR TRAVERSE : ");
+    printf("\nSELECT 4 TO END : ");
+    scanf("\n%d",&select);
+
+    if(select==1)
+    {
+    insert();
+    goto again;
+    }
+    if(select==2)
+    {
+    delete();
+    goto again;
+    }
+    if(select==3)
+    {
+    traversal();
+    goto again;
+    }
+    if(select==4)
+    {
+        printf("THE CODE END'S : THANKS FOR USING.");
+    return 0;
+    }
+    else
+    {
+    printf("ENTER THE SELECTION AGAIN");
+    goto again;
+    }
+}
+int insert()
+{
+    printf("ENTER THE POSITION : ");
+    scanf("%d",&position);
+    printf("ENTER THE ELEMENT : ");
+    scanf("%d",&insert_element);
+
+    position=position-1;
+
+    for(loop=num_array;loop>=position;loop--)
+    {
+        array[loop+1]=array[loop];
+    }
+    array[position]=insert_element;
+    num_array=num_array+1;
+}
+int delete()
+{
+    printf("ENTER THE POSITION TO DELETE : ");
+    scanf("%d",&position);
+    position=position-1;
+    for(loop=position;loop<num_array;loop++)
+    {
+    array[loop]=array[loop+1];
+    }
+    num_array=num_array-1;
+}
+int traversal()
+{
+    for(loop=0;loop<=num_array;loop++)
+    {
+        printf("\n%d",array[loop]);
+    }
+}
