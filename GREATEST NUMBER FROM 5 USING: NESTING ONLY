@@ -1,0 +1,140 @@
+#include <stdio.h>
+int main ()
+{
+    int a,b,c,d,e;
+
+    printf("ENTER THE NUMBER OF A = ");
+    scanf ("%d",&a);
+    printf("ENTER THE NUMBER OF B = ");
+    scanf ("%d",&b);
+    printf("ENTER THE NUMBER OF C = ");
+    scanf ("%d",&c);
+    printf("ENTER THE NUMBER OF D = ");
+    scanf ("%d",&d);
+    printf("ENTER THE NUMBER OF E = ");
+    scanf ("%d",&e);
+    
+
+    if (a > b)
+    {
+        // a c d e
+        if (a > c)
+        {
+            // a d e
+            if (a > d)
+            {
+                // a e
+                if (a > e)
+                {
+                    printf("A HAS THE LARGEST NUMBER");
+                }
+                else
+                {
+                    printf("E HAS THE LARGEST NUMBER");
+                }
+            }
+            else
+            {
+                // d e
+                if (d > e)
+                {
+                    printf("D HAS THE LARGEST NUMBER");
+                }
+                else
+                {
+                    printf("E HAS THE LARGEST NUMBER");
+                }
+            }
+        }
+        else
+        {
+            // c d e
+            if (c > d)
+            {
+                // c e
+                if (c > e)
+                {
+                    printf("C HAS THE LARGEST NUMBER");
+                }
+                else
+                {
+                    printf("E HAS THE LARGEST NUMBER");
+                }
+
+            }
+            else
+            {
+                // d e
+                if (d > e)
+                {
+                    printf("D HAS THE LARGEST NUMBER");
+                }
+                else
+                {
+                    printf("E HAS THE LARGEST NUMBER");
+                }
+            }
+        }
+
+    }
+    else
+    {
+        // b c d e
+        if (b > c)
+        {
+            // b d e
+            if (b > d)
+            {
+                // b e
+                if (b > e)
+                {
+                    printf("B HAS THE LARGEST NUMBER");
+                }
+                else
+                {
+                    printf("E HAS THE LARGEST NUMBER");
+                }
+            }
+            else
+            {
+                // d e
+                if (d > e)
+                {
+                    printf("D HAS THE LARGEST NUMBER");
+                }
+                else
+                {
+                    printf("E HAS THE LARGEST NUMBER");
+                }
+            }
+        }
+        else
+        {
+            // c d e
+            if (c > d)
+            {
+                // c e
+                if (c > e)
+                {
+                    printf("C HAS THE GREATEST NUMBER");
+                }
+                else
+                {
+                    printf("E HAS THE GREATEST NUMBER");
+                }
+            }
+            else
+            {
+                // d e
+                if (d > e)
+                {
+                    printf("D HAS THE LARGEST NUMBER");
+                }
+                else
+                {
+                    printf("E HAS THE LARGEST NUMBER");
+                }
+            }
+        }
+    }
+}
